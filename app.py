@@ -26,10 +26,9 @@ print(df.Gender.unique())
 
 
 # Counting values per gender
+gender_not_interviewd_df = df.groupby('Gender')['Interviewed'].apply(lambda x: (x=='No').sum()).reset_index(name='count')
 gender_interviewd_df = df.groupby('Gender')['Interviewed'].apply(lambda x: (x=='Yes').sum()).reset_index(name='count')
 gender_hired_df = df.groupby('Gender')['Hired'].apply(lambda x: (x=='Yes').sum()).reset_index(name='count')
-print (gender_interviewd_df)
-print (gender_hired_df)
 
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
@@ -75,6 +74,14 @@ app.layout = html.Div(children=[
         figure=go.Figure(
             data=[
                 go.Bar(
+                    x=gender_not_interviewd_df['Gender'],
+                    y=gender_not_interviewd_df['count'],
+                    name='Not Interviewed by Gender',
+                    marker=go.bar.Marker(
+                        color='rgb(225, 128, 0)'
+                    )
+                ),
+                go.Bar(
                     x=gender_interviewd_df['Gender'],
                     y=gender_interviewd_df['count'],
                     name='Interviewed by Gender',
@@ -102,7 +109,7 @@ app.layout = html.Div(children=[
             )
         ),
         style={'height': 300},
-        id='my-graph'
+        id='interview-gender'
     )
 
 ])
