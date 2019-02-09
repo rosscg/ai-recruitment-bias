@@ -22,8 +22,18 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 df = pd.read_csv(
     'data/hiring-patterns.csv')
+print(df.Gender.unique())
+
+
+# Counting values per gender
+gender_interviewd_df = df.groupby('Gender')['Interviewed'].apply(lambda x: (x=='Yes').sum()).reset_index(name='count')
+gender_hired_df = df.groupby('Gender')['Hired'].apply(lambda x: (x=='Yes').sum()).reset_index(name='count')
+print (gender_interviewd_df)
+print (gender_hired_df)
+
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
 
 app.layout = html.Div(children=[
     html.H1(children='Hello Dash'),
@@ -58,10 +68,44 @@ app.layout = html.Div(children=[
                 hovermode='closest'
             )
         }
+    ),
+
+
+    dcc.Graph(
+        figure=go.Figure(
+            data=[
+                go.Bar(
+                    x=gender_interviewd_df['Gender'],
+                    y=gender_interviewd_df['count'],
+                    name='Interviewed by Gender',
+                    marker=go.bar.Marker(
+                        color='rgb(55, 83, 109)'
+                    )
+                ),
+                go.Bar(
+                    x=gender_hired_df['Gender'],
+                    y=gender_hired_df['count'],
+                    name='Admissions by Gender',
+                    marker=go.bar.Marker(
+                        color='rgb(26, 118, 255)'
+                    )
+                )
+            ],
+            layout=go.Layout(
+                title='Admissions by Gender',
+                showlegend=True,
+                legend=go.layout.Legend(
+                    x=0,
+                    y=1.0
+                ),
+                margin=go.layout.Margin(l=40, r=0, t=40, b=30)
+            )
+        ),
+        style={'height': 300},
+        id='my-graph'
     )
 
 ])
-
 
 
 
