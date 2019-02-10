@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -28,7 +29,7 @@ df = pd.read_csv(
 #Skill Requirements met,
 #Top 3 soft skills candidate selected from fixed list,
 
-
+# Fixed dataframes for proof-of-concept require pre-formatted data. Future development will support interpretation of input frame.
 gender_interviewd_df = df.groupby('Gender')['Interviewed'].apply(lambda x: (x=='Yes').sum()).reset_index(name='interviewed')
 gender_hired_df = df.groupby('Gender')['Hired'].apply(lambda x: (x=='Yes').sum()).reset_index(name='hired')
 gender_df = df.groupby('Gender').count()["Internships"].reset_index().join(gender_interviewd_df['interviewed']).join(gender_hired_df['hired'])

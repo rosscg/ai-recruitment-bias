@@ -1,3 +1,8 @@
+This app is a web-based dashboard which analyses the input and output of an algorithm to identify where undesirable biases are present.
+Often, protected classes (such as gender) are encoded in a set of unprotected variables, therefore a naive algorithm is able to discriminate against (e.g.) gender without using access to the protected class in the first place.
+
+Simple 'fairness' methods do not identify these relationships and are therefore unable to address key issues in the measurement methodology. This multivariate analysis highlights variables which are highly correlated with protected classes.
+
 #### Resources ####
 https://dash.plot.ly/
 
