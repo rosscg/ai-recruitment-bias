@@ -36,10 +36,10 @@
 12388694,11,Mechanical engineering,4,Yes,"Project management, Work ethic, interpersonal skills",N/A,,,Yes,No
 10643507,22,Mechanical engineering,4,Yes,"Sales / Marketing, interpersonal skills, Work ethic",N/A,White,Yes,Yes,Yes
 16808085,25,Chemical engineering,5,Yes,"Leadership, Sales / Marketing, interpersonal skills",Male,White,No,Yes,No
-13778682,4,Materials Science,5,Yes,"Negotiation, Problem solving, Critical thinking",Male,White,no,Yes,No
+13778682,4,Materials Science,5,Yes,"Negotiation, Problem solving, Critical thinking",Male,White,No,Yes,No
 12834843,21,Materials Science,3,Yes,"interpersonal skills, Conflict resolution, Negotiation",N/A,,,Yes,No
 12302002,25,Life Sciences,3,No,"Sales / Marketing, Flexibility / adaptability, Critical thinking",N/A,,,No,No
-15459755,6,Statistics,1,Yes,"Public speaking, presentation skills, Leadership",Male,White,yes,Yes,Yes
+15459755,6,Statistics,1,Yes,"Public speaking, presentation skills, Leadership",Male,White,Yes,Yes,Yes
 13610355,25,Psychology,3,Yes,"Flexibility / adaptability, Work ethic, Negotiation",Female,BME,No,Yes,Yes
 13691500,10,Astronomy,2,No,"Project management, Emotional intelligence, Critical thinking",Female,White,No,No,No
 11920023,23,Chemical engineering,2,Yes,"Emotional intelligence, Negotiation, Critical thinking",Male,BME,No,Yes,Yes
@@ -62,7 +62,7 @@
 11059385,15,Physiology,5,Yes,"Presentation skills, Problem solving, Flexibility / adaptability",Male,BME,Yes,Yes,Yes
 19884743,19,Psychology,3,Yes,"Leadership, Sales / Marketing, Work ethic",N/A,,,Yes,Yes
 10743833,18,Physics,2,Yes,"Flexibility / adaptability, Emotional intelligence, Conflict resolution",Male,BME,No,Yes,Yes
-15124699,5,Mechanical engineering,2,NO,"Leadership, Flexibility / adaptability, Conflict resolution",Male,BME,No,NO,NO
+15124699,5,Mechanical engineering,2,No,"Leadership, Flexibility / adaptability, Conflict resolution",Male,BME,No,No,No
 13712312,21,Chemical engineering,5,Yes,"Presentation skills, Flexibility / adaptability, Work ethic",N/A,,,Yes,Yes
 15406857,18,Statistics,4,Yes,"Leadership, Negotiation, Work ethic",Male,BME,Yes,Yes,Yes
 18717447,14,Biology,2,Yes,"Public speaking, Flexibility / adaptability, Project management",N/A,,,Yes,Yes
